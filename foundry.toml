@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+bytecode_hash = "none"
+cbor_metadata = false
+optimizer_runs = 44444444
+via_ir = true
+gas_limit = "300000000"
+
+# The oracle body and test fixtures are read from files in CI
+fs_permissions = [{ access = "read", path = "./" }]
+
+[profile.default.fuzz]
+runs = 128
+
+[profile.ci]
+fuzz = { runs = 1000 }

@@ -1,0 +1,14 @@
+{
+  "objective": "Deploy the SwarmShield hook from this Foundry repo as a Uniswap v4 hook launch: build and test the contracts (forge test must pass — 18 tests), run the audit panel, then deploy the token (name SwarmShield, symbol SHIELD) with the hook beside it and seed the pool with the hook attached. The hook is ownerless. Use the constructor arguments in LAUNCH_SPEC.md §1, substituting the deployed token address into the oracle body. The hook address must carry the permission flags 0x288 (beforeSwap, beforeSwapReturnDelta, beforeRemoveLiquidity) in its low 14 bits — mine the deploy salt accordingly. If the pool can be created with the dynamic fee (0x800000), use it; otherwise the policy fee works and trust pricing falls back to the hook's surcharge.",
+  "repoUrl": "https://github.com/<YOUR_GITHUB>/swarmshield",
+  "baseCommit": "<40-HEX-FROM-REQUESTS-IMPORT>",
+  "shape": "chain",
+  "references": ["uniswap-v4-hooks", "uniswap-v4-security"],
+  "steps": [
+    { "skill": "adapt-contract-project" }
+  ],
+  "onchain": "univ4_hook",
+  "chainId": 1,
+  "pairWith": "eth",
+  "economics": { "poolBps": 9000 }
+}

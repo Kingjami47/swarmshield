@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "question": "At the closing block, do the IMD launch registry at explorer.imd.fun and the X account @SwarmShieldIMD publicly identify the same deployer wallet for token 0x$TOKEN (SwarmShield), and is there any credible public evidence that this deployment impersonates another Identity MD ecosystem project? Answer true if the registry and the X account match on the deployer wallet and no impersonation evidence exists, false otherwise.",
+  "chainId": 1,
+  "window": { "hours": 24 },
+  "answerType": "bool",
+  "evidence": "panel",
+  "panelSize": 7,
+  "quorum": 5,
+  "validForSeconds": 2592000,
+  "definitions": {
+    "deployer_wallet": "The wallet recorded as the paying/deploying wallet of the launch in the IMD launch registry (explorer.imd.fun launch page for 0x$TOKEN).",
+    "impersonation": "A deployment that borrows another project's name, ticker, site, or identity within the IMD ecosystem, or claims a team affiliation that cannot be verified."
+  },
+  "guards": { "min": "0", "max": "1" }
+}
